@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Ortiz_J_Practica_Navegacion.ViewModels"
+             x:Class="Ortiz_J_Practica_Navegacion.Views.DetallePage">
+
+    <ContentPage.BindingContext>
+        <vm:DetalleViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="20" Spacing="12" Background="WhiteSmoke">
+
+        <HorizontalStackLayout
+         Spacing="100"
+         Grid.Row="0">
+            
+            <Label
+             Text="Producto"
+             FontSize="32"
+             TextColor="Black"
+             FontAttributes="Bold"
+             HorizontalOptions="Start"
+             VerticalOptions="Center"
+             />
+            
+        </HorizontalStackLayout>
+
+        <Border
+            BackgroundColor="LightSlateGray"
+            Padding="10"
+            StrokeShape="RoundRectangle 15"
+            >
+            <Grid
+                Padding="10"
+                ColumnDefinitions="*"
+                RowDefinitions="auto, auto, auto"
+                HorizontalOptions="Fill"
+                VerticalOptions="Center"
+                
+                RowSpacing="15"
+                >
+
+                <HorizontalStackLayout
+                    Spacing="5"
+                    Grid.Row="0">
+                    <Label
+                        Text="Nombre:"
+                        FontSize="16"
+                        TextColor="AliceBlue"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        />
+                    <Label
+                        Text="{Binding Nombre}"
+                        FontSize="16"
+                        TextColor="AliceBlue"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        />  
+                </HorizontalStackLayout>
+                <HorizontalStackLayout
+                    Spacing="5"
+                    Grid.Row="1">   
+                    <Label
+                        Text="Precio:"
+                        FontSize="16"
+                        TextColor="AliceBlue"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        />
+                    <Label
+                        Text="{Binding Precio}"
+                        FontSize="16"
+                        TextColor="AliceBlue"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout
+                    Spacing="5"
+                    Grid.Row="2">
+                    <Label
+                        Text="Descripcion:"
+                        FontSize="16"
+                        TextColor="AliceBlue"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        />
+                    <Label
+                        Text="{Binding Descripcion}"
+                        FontSize="16"
+                        TextColor="AliceBlue"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        />
+                </HorizontalStackLayout>
+            </Grid>
+        </Border>
+        
+        
+    </VerticalStackLayout>
+
+</ContentPage>

@@ -1,0 +1,8 @@
+﻿<maui:MauiWinUIApplication
+    x:Class="Ortiz_J_Practica_Navegacion.WinUI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:maui="using:Microsoft.Maui"
+    xmlns:local="using:Ortiz_J_Practica_Navegacion.WinUI">
+
+</maui:MauiWinUIApplication>
