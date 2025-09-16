@@ -25,21 +25,57 @@ namespace Ortiz_J_Practica_Navegacion.ViewModels
         public string Nombre
         {
             get => nombre;
-            set { nombre = value; OnPropertyChanged(); }
+            set
+            {
+                //valido si es nulo o vacio
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    nombre = "Producto sin nombre";
+                }
+                else
+                {
+                    nombre = value;
+                }
+                OnPropertyChanged();
+            }
         }
 
         //Propiedad para exponer la descripcion a la vista apra el binding
         public string Descripcion
         {
             get => descripcion;
-            set { descripcion = value; OnPropertyChanged(); }
+            set
+            {
+                //valido si es nulo o vacio
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    descripcion = "Producto sin descripcion";
+                }
+                else
+                {
+                    descripcion = value;
+                }
+                OnPropertyChanged();
+            }
         }
 
         //Propiedad para exponer el precio a la vista apra el binding
         public decimal Precio
         {
             get => precio;
-            set { precio = value; OnPropertyChanged(); }
+            set
+            {
+                //valido si es menor a 0 y le pongo como precio default 0
+                if (value < 0)
+                {
+                    precio = 0;
+                }
+                else
+                {
+                    precio = value;
+                }
+                OnPropertyChanged();
+            }
         }
 
         //Evento de la interfaz
